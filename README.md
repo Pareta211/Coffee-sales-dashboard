@@ -34,23 +34,3 @@ The **Coffee Shop Sales Dashboard** built in **Power BI** offers a detailed, int
 2. Open the `.pbix` file in Power BI Desktop  
 3. Refresh the data if necessary  
 4. Use slicers to explore month-wise performance  
-
-## 🧑‍💼 Author
-**Avinash Pareta**  
-Power BI Developer | Data Analyst  
-📧 [Add your email or LinkedIn here]  
-"""
-
-# Save README file
-readme_path = os.path.join(base_path, "README.md")
-with open(readme_path, "w") as f:
-    f.write(readme_content.strip())
-
-# Create ZIP file
-zip_path = os.path.join(base_path, "coffee-shop-sales-dashboard.zip")
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    for file_name in files_to_include:
-        file_path = os.path.join(base_path, file_name)
-        zipf.write(file_path, arcname=file_name)
-
-zip_path
